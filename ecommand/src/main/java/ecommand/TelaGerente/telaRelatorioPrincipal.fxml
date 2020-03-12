@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="720.0" style="-fx-background-color: #5353c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaGerente.TelaRelatorioController">
+    <children>
+        <Label layoutX="317.0" layoutY="155.0" text="Relatórios ">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="126.0" fitWidth="296.0" layoutX="212.0" layoutY="14.0">
+            <image>
+                <Image url="@../img/logo.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="botaoVoltar" layoutX="327.0" layoutY="539.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="39.0" prefWidth="72.0" text="Voltar">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+        <Button layoutX="307.0" layoutY="467.0" mnemonicParsing="false" onAction="#acaoGerarRelatorioEstoque" prefHeight="39.0" prefWidth="111.0" text="Estoque" wrapText="true">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+        <Label disable="true" layoutX="163.0" layoutY="192.0" text="Escolha o período que deseja gerar o relatório:" visible="false">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label disable="true" layoutX="238.0" layoutY="239.0" prefHeight="17.0" prefWidth="31.0" text="DE:" visible="false">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label disable="true" layoutX="438.0" layoutY="239.0" prefHeight="17.0" prefWidth="31.0" text="ATÉ:" visible="false">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="txtDataInicio" layoutX="124.0" layoutY="267.0" prefHeight="39.0" prefWidth="176.0" />
+        <DatePicker fx:id="txtDataFim" layoutX="420.0" layoutY="267.0" prefHeight="39.0" prefWidth="176.0" />
+        <Button layoutX="307.0" layoutY="354.0" mnemonicParsing="false" onAction="#acaoGerarRelatorioPedidos" prefHeight="39.0" prefWidth="111.0" text="Gerar" wrapText="true">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+        <Label layoutX="237.0" layoutY="422.0" text="Ou apenas gerar relatorio de: ">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+      <Label layoutX="114.0" layoutY="206.0" text="Escolha o período que deseja gerar o relatório de Pedidos">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="212.0" layoutY="306.0" text="De">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="464.0" layoutY="306.0" text="Até">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="315.0" layoutY="272.0" mnemonicParsing="false" onAction="#acaoHoje" prefHeight="27.0" prefWidth="91.0" text="Hoje">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaComanda.TelaComandaController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="486.0" prefWidth="718.0">
+            <children>
+                <AnchorPane layoutX="-2.0" minHeight="0.0" minWidth="0.0" prefHeight="113.0" prefWidth="722.0" style="-fx-background-color: #5353c6;">
+                    <children>
+                        <ImageView fitHeight="85.0" fitWidth="225.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/logo.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="324.0" layoutY="38.0" text="Meus Pedidos " textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="30.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <Button layoutX="137.0" layoutY="524.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="36.0" prefWidth="145.0" text="Fazer outro pedido" />
+            <TableView fx:id="tabelaPedidos" layoutX="51.0" layoutY="153.0" onMouseClicked="#acaoInformacaoPedido" prefHeight="347.0" prefWidth="372.0">
+              <columns>
+                <TableColumn fx:id="colunaCodPedido" minWidth="0.0" prefWidth="126.0" text="Número do Pedido" />
+                  <TableColumn fx:id="colunaNumeroMesa" prefWidth="147.0" text="Número da Mesa" />
+                <TableColumn fx:id="colunaPrecoPedido" minWidth="0.0" prefWidth="98.0" text="Preço" />
+              </columns>
+            </TableView>
+            <Label layoutX="51.0" layoutY="120.0" prefHeight="19.0" prefWidth="61.0" style="-fx-background-color: #0000fa;" text=" Pedidos:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="137.0" layoutY="121.0" text="(Clique no pedido para mais informações)" />
+            <Label layoutX="454.0" layoutY="230.0" text="Valor total a pagar:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="452.0" layoutY="263.0" text="R$" textFill="#47d147">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPreco" layoutX="493.0" layoutY="263.0" prefHeight="27.0" prefWidth="85.0" text="0.00" textFill="#47d147">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="523.0" layoutY="524.0" mnemonicParsing="false" onAction="#acaoFecharConta" prefHeight="36.0" prefWidth="110.0" text="Fechar Conta" />
+            <Label layoutX="452.0" layoutY="153.0" text="Número da Comanda:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNumeroComanda" layoutX="451.0" layoutY="180.0" prefHeight="27.0" prefWidth="85.0" text="0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            </children></AnchorPane>
+    </items>
+</SplitPane>

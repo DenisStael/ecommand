@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="720.0" style="-fx-background-color: #5353c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaCozinheiro.TelaCozinheiroController">
+   <children>
+      <Label layoutX="237.0" layoutY="160.0" prefHeight="16.0" prefWidth="247.0" text="Bem vindo! Pedidos abaixo:" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="botaoVoltar" layoutX="212.0" layoutY="549.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #ff3333;" text="Sair" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="126.0" fitWidth="296.0" layoutX="212.0" layoutY="28.0">
+         <image>
+            <Image url="@../img/logo.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tabelaCozinheiro" layoutY="197.0" onMouseClicked="#acaoInformacaoCozinheiro" prefHeight="337.0" prefWidth="720.0">
+         <columns>
+            <TableColumn fx:id="colunaCodPedido" minWidth="0.0" prefWidth="126.0" text="Número do Pedido" />
+            <TableColumn fx:id="colunaNumMesa" prefWidth="149.0" text="Número da Mesa" />
+            <TableColumn fx:id="colunaObservacao" prefWidth="444.0" text="Descrição" />
+         </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="160.0" mnemonicParsing="false" onAction="#acaoAtualizar" prefHeight="31.0" prefWidth="131.0" text="Atualizar Pedidos">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="393.0" layoutY="549.0" mnemonicParsing="false" onAction="#acaoAtendimento" prefHeight="31.0" prefWidth="145.0" text="Meus Atendimentos">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

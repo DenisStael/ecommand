@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="720.0" style="-fx-background-color: #5353c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaCadastroMesa.TelaCadastroMesaController">
+    <children>
+        <TextField fx:id="txtNumeroMesas" layoutX="289.0" layoutY="306.0" prefHeight="39.0" prefWidth="150.0" promptText="Numero de mesas" style="-fx-background-radius: 100;" styleClass="fx">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+        <Button layoutX="309.0" layoutY="416.0" mnemonicParsing="false" onAction="#acaoConfirmar" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: #47d147; -fx-background-radius: 100;" text="Confirmar" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="botaoVoltar" layoutX="319.0" layoutY="512.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: WHITE; -fx-background-radius: 100;" text="Voltar" />
+        <Label layoutX="246.0" layoutY="169.0" text="Cadastrar Mesas">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="126.0" fitWidth="296.0" layoutX="213.0" layoutY="29.0">
+            <image>
+                <Image url="@../img/logo.png" />
+            </image>
+        </ImageView>
+      <Label layoutX="246.0" layoutY="268.0" text="Digite o número de mesas">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="222.0" text="Mesas cadastradas:" textFill="#e1e1e1">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelNumeroMesas" layoutX="451.0" layoutY="222.0" prefHeight="32.0" prefWidth="29.0" textFill="#e1e1e1">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.15719063545150502" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaVisualizarCardapio.TelaVisualizarCardapioController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5353c6;">
+            <children>
+                <Label layoutX="379.0" layoutY="24.0" text="Cardápio" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="30.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="imgRestaurante" fitHeight="97.0" fitWidth="304.0" layoutX="-6.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/logo.png" />
+                    </image>
+                </ImageView>
+            </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="433.0" prefWidth="646.0" style="-fx-background-color: #5353c6;">
+            <children>
+                <Accordion layoutX="163.0" layoutY="7.0" prefHeight="487.0" prefWidth="547.0" stylesheets="@../css/TableStyle.css">
+                    <panes>
+                        <TitledPane alignment="CENTER" animated="false" onMouseClicked="#acaoSelecaoPrato" prefHeight="421.0" prefWidth="336.0" text="Selecionar Prato">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                                    <children>
+                                        <ListView fx:id="listaPratos" onMouseClicked="#acaoSelecionaItem" prefHeight="435.0" prefWidth="547.0" stylesheets="@../css/TableStyle.css" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane alignment="CENTER" animated="false" onMouseClicked="#acaoSelecaoBebida" text="Selecionar Bebida">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="listaBebidas" onMouseClicked="#acaoSelecionaItem" prefHeight="434.0" prefWidth="547.0" stylesheets="@../css/TableStyle.css" />
+                           </children></AnchorPane>
+                            </content>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+                <Button layoutX="7.0" layoutY="438.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="36.0" prefWidth="147.0" text="Sair">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button layoutX="7.0" layoutY="341.0" mnemonicParsing="false" onAction="#acaoProximo" prefHeight="36.0" prefWidth="147.0" style="-fx-background-color: #47d147;" text="Finalizar Pedido" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <Button layoutX="7.0" layoutY="391.0" mnemonicParsing="false" onAction="#acaoComanda" prefHeight="36.0" prefWidth="147.0" style="-fx-background-color: #47d147;" text=" Ver meus pedidos" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+            <Button layoutX="7.0" layoutY="293.0" mnemonicParsing="false" onAction="#acaoPedidoAtual" prefHeight="36.0" prefWidth="147.0" style="-fx-background-color: #47d147;" text="Ver pedido atual" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="botaoGarcom" layoutX="7.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#acaoGarcom" prefHeight="36.0" prefWidth="147.0" text="Chamar Garçom" />
+            </children></AnchorPane>
+    </items>
+</SplitPane>

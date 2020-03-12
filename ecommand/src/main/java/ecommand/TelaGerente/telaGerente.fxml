@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="720.0" style="-fx-background-color: #5353c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaGerente.TelaGerenteController">
+   <children>
+      <Label layoutX="175.0" layoutY="177.0" text="Bem vindo Gerente, gostaria de fazer o quê?">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="126.0" fitWidth="296.0" layoutX="214.0" layoutY="29.0">
+         <image>
+            <Image url="@../img/logo.png" />
+         </image>
+      </ImageView>
+      <SplitMenuButton fx:id="menuGerente" layoutX="254.0" layoutY="241.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="225.0" text="Favor selecione uma opção...">
+        <items>
+          <MenuItem fx:id="menuCadastrarProduto" mnemonicParsing="false" onAction="#acaoCadastrarProduto" onMenuValidation="#acaoCadastrarProduto" text="Cadastrar produto" />
+            <MenuItem fx:id="menuGerenciarEstoque" mnemonicParsing="false" onAction="#acaoGerenciarEstoque" onMenuValidation="#acaoGerenciarEstoque" text="Controlar estoque" />
+            <MenuItem fx:id="botaoMontarPrato" mnemonicParsing="false" onAction="#acaoMontarPrato" onMenuValidation="#acaoMontarPrato" text="Montar prato" />
+            <MenuItem fx:id="botaoEditarPrato" mnemonicParsing="false" onAction="#acaoEditarPrato" onMenuValidation="#acaoEditarPrato" text="Editar prato" />
+            <MenuItem fx:id="menuCadastrarMesas" mnemonicParsing="false" onAction="#acaoCadastrarMesas" onMenuValidation="#acaoCadastrarMesas" text="Cadastrar Mesas" />
+            <MenuItem fx:id="menuMontarCardapio" mnemonicParsing="false" onAction="#acaoMontarCardapio" onMenuValidation="#acaoMontarCardapio" text="Montar cardápio" />
+            <MenuItem mnemonicParsing="false" onAction="#acaoCadastrarCozinheiro" text="Cadastrar Cozinheiro" />
+            <MenuItem mnemonicParsing="false" onAction="#acaoCadastrarGarcom" text="Cadastrar Garçom" />
+            <MenuItem mnemonicParsing="false" onAction="#acaoVerComandas" text="Visualizar Comandas" />
+            <MenuItem mnemonicParsing="false" onAction="#acaoVerAvaliacoes" text="Avaliações dos clientes" />
+            <MenuItem mnemonicParsing="false" onAction="#acaoEmitirRelatorio" text="Emitir Relatório" />
+        </items>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </SplitMenuButton>
+      <Button fx:id="botaoVoltar" layoutX="330.0" layoutY="530.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="39.0" prefWidth="72.0" style="-fx-background-color: #ff3333;" text="Sair" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

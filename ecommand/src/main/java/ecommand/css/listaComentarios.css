@@ -1,0 +1,30 @@
+.list-view{
+    -fx-background-color: #dbe1e7;
+    -fx-padding: 3px;
+}
+.list-cell{
+    -fx-background-color: transparent;
+    -fx-padding: 15 0;
+    -fx-background-insets: 0px, 2px ;
+    -fx-border-color: #5353c6;
+}
+.list-cell:empty {
+    visibility:hidden;
+}
+.label.title{
+    -fx-font-size: 12;
+    -fx-padding: 0 3;
+}
+.label.text{
+    -fx-padding: 5;
+    -fx-background-color: transparent;
+    -fx-font-size: 16;
+    -fx-font-family: "Comic Sans MS";
+}
+.rating > .container > .button{
+    -fx-pref-width: 20 ;
+    -fx-pref-height: 20 ;
+    -fx-background-size: cover;
+    -fx-padding: 0;
+    -fx-opacity: 1;
+}

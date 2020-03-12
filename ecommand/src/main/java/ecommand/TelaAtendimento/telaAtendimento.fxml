@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="720.0" style="-fx-background-color: #5353c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaAtendimento.TelaAtendimentoController">
+    <children>
+        <Label layoutX="216.0" layoutY="161.0" prefHeight="30.0" prefWidth="289.0" text="Meus pedidos em Atendimento:" wrapText="true">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="botaoVoltar" layoutX="328.0" layoutY="548.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="31.0" prefWidth="66.0" text="Voltar">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="126.0" fitWidth="296.0" layoutX="212.0" layoutY="28.0">
+            <image>
+                <Image url="@../img/logo.png" />
+            </image>
+        </ImageView>
+        <TableView fx:id="tabelaPedido" layoutY="197.0" onMouseClicked="#acaoInformacao" prefHeight="337.0" prefWidth="720.0">
+            <columns>
+                <TableColumn fx:id="colunaNumMesa" prefWidth="65.0" text="Mesa" />
+                <TableColumn fx:id="colunaObservacao" prefWidth="504.0" text="Observação" />
+                <TableColumn fx:id="colunaCodPedido" minWidth="0.0" prefWidth="60.0" text="Pedido" />
+            <TableColumn fx:id="colunaStatus" prefWidth="90.0" text="Status" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

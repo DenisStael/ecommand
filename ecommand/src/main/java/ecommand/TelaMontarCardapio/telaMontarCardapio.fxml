@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaMontarCardapio.TelaMontarCardapioController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5353c6;">
+         <children>
+            <TabPane layoutY="93.0" prefHeight="463.0" prefWidth="718.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="Adicionar Pratos">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="236.0" prefWidth="629.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <TableView fx:id="tabelaPratos" layoutX="5.0" layoutY="139.0" onMouseClicked="#clicarTabelaPrato" prefHeight="287.0" prefWidth="708.0">
+                                <columns>
+                                  <TableColumn fx:id="colunaPrato" prefWidth="126.0" text="Nome" />
+                                  <TableColumn fx:id="colunaCodPrato" prefWidth="60.0" text="Código" />
+                                    <TableColumn fx:id="colunaDescPrato" prefWidth="448.0" text="Descrição" />
+                                    <TableColumn fx:id="colunaPreco" prefWidth="72.0" text="Preço" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="23.0" layoutY="26.0" text="Código do Prato/Bebida:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtCodPrato" layoutX="207.0" layoutY="26.0" prefHeight="25.0" prefWidth="147.0" promptText="Código do Prato/Bebida" />
+                              <Button fx:id="botaoAdicionarPrato" layoutX="360.0" layoutY="24.0" mnemonicParsing="false" onAction="#acaoAdicionarPrato" text="Adicionar">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="botaoPesquisarPrato" layoutX="360.0" layoutY="88.0" mnemonicParsing="false" onAction="#acaoPesquisarPrato" text="Pesquisar">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="txtNomePrato" layoutX="206.0" layoutY="90.0" promptText="Nome do prato/bebida" />
+                              <Label layoutX="23.0" layoutY="88.0" text="Pesquisar por nome:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imgCardapio" fitHeight="118.0" fitWidth="179.0" layoutX="456.0" layoutY="17.0" onMouseClicked="#acaoImagem" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/sem_imagem.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="447.0" text="Imagem que aparecerá no cardapio:" />
+                              <Button fx:id="botaoSalvarImg" layoutX="638.0" layoutY="60.0" mnemonicParsing="false" onAction="#acaoSalvarFoto" prefHeight="32.0" prefWidth="58.0" text="Salvar" wrapText="true" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Remover Pratos">
+                     <content>
+                        <AnchorPane prefHeight="396.0" prefWidth="706.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Accordion prefHeight="371.0" prefWidth="718.0">
+                                 <panes>
+                                    <TitledPane animated="false" onMouseClicked="#acaoSelecaoPrato" prefHeight="421.0" prefWidth="336.0" text="Selecione um Prato">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="tabelaPratos2" prefHeight="323.0" prefWidth="718.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="colunaNomePrato2" prefWidth="126.0" text="Nome" />
+                                                      <TableColumn fx:id="colunaCodPrato2" prefWidth="60.0" text="Código" />
+                                                      <TableColumn fx:id="colunaDescPrato2" prefWidth="460.0" text="Descrição" />
+                                                      <TableColumn fx:id="colunaPreco2" prefWidth="69.0" text="Preço" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" onMouseClicked="#acaoSelecaoBebida" prefHeight="337.0" prefWidth="718.0" text="Selecione uma Bebida">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="312.0" prefWidth="716.0">
+                                             <children>
+                                                <TableView fx:id="tabelaBebida" prefHeight="325.0" prefWidth="718.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="colunaNomeBebida" prefWidth="126.0" text="Nome" />
+                                                      <TableColumn fx:id="colunaCodBebida" prefWidth="60.0" text="Código" />
+                                                      <TableColumn fx:id="colunaDescBebida" prefWidth="464.0" text="Descrição" />
+                                                      <TableColumn fx:id="colunaPrecoBebida" prefWidth="66.0" text="Preço" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                 </panes>
+                              </Accordion>
+                              <Button layoutX="290.0" layoutY="376.0" mnemonicParsing="false" onAction="#acaoRemoverDoCardapio" prefHeight="33.0" prefWidth="145.0" style="-fx-background-color: #ff3333;" text="Remover do Cardápio" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <ImageView fitHeight="74.0" fitWidth="212.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="317.0" layoutY="37.0" text="Montar Cardápio" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button layoutX="334.0" layoutY="565.0" mnemonicParsing="false" onAction="#acaoVoltar" text="Voltar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

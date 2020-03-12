@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="236.0" prefWidth="396.0" style="-fx-background-color: #5353c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaVisualizarCardapio.telaSairMesaController">
+   <children>
+      <PasswordField fx:id="senhaSair" layoutX="122.0" layoutY="123.0" promptText="Senha" />
+      <Label layoutX="129.0" layoutY="83.0" text="Digite a senha para sair:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="labelSair" alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="118.0" prefHeight="17.0" prefWidth="175.0" textFill="#9a0c0c">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="162.0" layoutY="173.0" mnemonicParsing="false" onAction="#acaoConfirmar" style="-fx-background-radius: 100;" text="Confirmar" />
+   </children>
+</AnchorPane>

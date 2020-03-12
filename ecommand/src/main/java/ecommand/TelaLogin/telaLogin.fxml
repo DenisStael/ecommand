@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="720.0" style="-fx-background-color: #5353c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaLogin.TelaLoginController">
+    <children>
+        <Label layoutX="232.0" layoutY="218.0" text="Para continuar, faça o login:">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtUsuario" layoutX="276.0" layoutY="262.0" prefHeight="38.0" prefWidth="173.0" promptText="Usuário" stylesheets="@../css/TableStyle.css">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </TextField>
+        <PasswordField fx:id="txtSenha" layoutX="276.0" layoutY="322.0" prefHeight="38.0" prefWidth="173.0" promptText="Senha" stylesheets="@../css/TableStyle.css">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </PasswordField>
+        <Button fx:id="botaoLogar" layoutX="276.0" layoutY="395.0" mnemonicParsing="false" onAction="#acaoLogar" prefHeight="66.0" prefWidth="173.0" style="-fx-background-color: #00b33c;" styleClass="botaoLogar" stylesheets="@../css/TableStyle.css" text="Entrar" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </Button>
+      <ImageView fitHeight="126.0" fitWidth="296.0" layoutX="214.0" layoutY="29.0">
+         <image>
+            <Image url="@../img/logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="label" layoutX="335.0" layoutY="181.0" prefHeight="25.0" prefWidth="125.0" text="Gerente">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="181.0" text="ID">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="botaoVoltar" layoutX="308.0" layoutY="499.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="59.0" prefWidth="109.0" style="-fx-background-color: WHITE;" styleClass="botaoVoltar" stylesheets="@../css/TableStyle.css" text="Voltar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label fx:id="labelErroLogin" layoutX="185.0" layoutY="360.0" prefHeight="29.0" prefWidth="350.0" textFill="#ae1313">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

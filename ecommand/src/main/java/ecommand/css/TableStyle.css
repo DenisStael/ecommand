@@ -1,0 +1,137 @@
+.table-row-cell {
+    -fx-cell-size: 30px;
+}
+.label{
+    -fx-font-family: "Tahoma";
+    -fx-font-size: 15px;
+}
+.label.nome{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+.label.cifrao{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+.label.preco{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+.label.descricao{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 15;
+    -fx-text-fill: #000000;
+}
+.label.titulo{
+    -fx-font-family: "System";
+    -fx-font-size: 22;
+}
+.button{
+    -fx-background-radius: 100;
+}
+.text-field{
+    -fx-background-radius: 100;
+    -fx-background-size: 17;
+}
+.table-row-cell {
+    -fx-cell-size: 30px;
+}
+.table-view{
+    -fx-font-family: "Comic Sans MS";
+}
+.button.botaoGerente{
+    -fx-font-size: 22;
+    -fx-font-family: "Comic Sans MS";
+}
+.button.botaoGarcom{
+    -fx-font-size: 22;
+    -fx-font-family: "Comic Sans MS";
+}
+.button.botaoCozinheiro{
+    -fx-font-size: 22;
+    -fx-font-family: "Comic Sans MS";
+}
+.button.botaoMesa{
+    -fx-font-size: 22;
+    -fx-font-family: "Comic Sans MS";
+}
+.button.botaoLogar{
+    -fx-font-size: 20;
+    -fx-font-family: "System";
+}
+.button.botaoVoltar{
+    -fx-font-size: 20;
+    -fx-font-family: "System";
+}
+.button.sair{
+    -fx-font-family: "System";
+    -fx-font-size: 15;
+    -fx-background-radius: 0;
+}
+.pane{
+    -fx-border-width: 2;
+    -fx-border-color: #ffffff;
+}
+.gridPane{
+    -fx-background-color: #ffffff;
+}
+.gridPane > .botaoAdicionar{
+    visibility: hidden;
+}
+.gridPane > .botaoRemover{
+    visibility: hidden;
+}
+.accordion{
+    -fx-background-color: #5353c6;
+    -fx-background-radius: 12;
+}
+.titled-pane:expanded > .title {
+    -fx-base: #dbe1e7;
+    -fx-background-radius: 100;
+    -fx-font-family: "Comic Sans MS";
+}
+.titled-pane > .title {
+    -fx-base: #ffffff;
+    -fx-background-radius: 100;
+    -fx-font-family: "Comic Sans MS";
+}
+.titled-pane > .title > .arrow-button .arrow {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #5353c6;
+    -fx-scale-x: 1.5;
+    -fx-scale-y: 1.5;
+}
+.list-view{
+    -fx-background-color: #dbe1e7;
+    -fx-padding: 3px;
+}
+.list-cell{
+    -fx-background-color: transparent;
+    -fx-padding: 2px;
+    -fx-background-insets: 0px, 2px ;
+}
+.list-cell:empty {
+    visibility:hidden;
+}
+.list-cell:selected > .gridPane{
+    -fx-background-color: #dbe1e7;
+    -fx-border-color: #5353c6;
+}
+.list-cell:selected > .gridPane > .botaoAdicionar{
+    visibility: visible;
+    -fx-background-color: #47d147;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+.list-cell:selected > .gridPane > .botaoRemover{
+    visibility: visible;
+    -fx-background-color: #ff3333;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}

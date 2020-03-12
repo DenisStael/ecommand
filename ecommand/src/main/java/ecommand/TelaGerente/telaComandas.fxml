@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaGerente.TelaComandasController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="486.0" prefWidth="718.0">
+            <children>
+                <AnchorPane layoutX="-2.0" minHeight="0.0" minWidth="0.0" prefHeight="113.0" prefWidth="722.0" style="-fx-background-color: #5353c6;">
+                    <children>
+                        <ImageView fitHeight="85.0" fitWidth="225.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/logo.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="324.0" layoutY="38.0" text="Comandas" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="30.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <TableView fx:id="tabelaPedidos" layoutX="14.0" layoutY="174.0" prefHeight="367.0" prefWidth="487.0">
+                    <columns>
+                  <TableColumn fx:id="colunaComanda" prefWidth="116.0" text="Número Comanda" />
+                        <TableColumn fx:id="colunaCodPedido" minWidth="0.0" prefWidth="127.0" text="Número do Pedido" />
+                        <TableColumn fx:id="colunaNumeroMesa" prefWidth="132.0" text="Número da Mesa" />
+                        <TableColumn fx:id="colunaPrecoPedido" minWidth="0.0" prefWidth="110.0" text="Preço" />
+                    </columns>
+                </TableView>
+            <Button layoutX="326.0" layoutY="548.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="36.0" prefWidth="67.0" text="Voltar" />
+            <Label layoutX="511.0" layoutY="468.0" text="Valor Total:">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelValorTotal" layoutX="618.0" layoutY="468.0" prefHeight="26.0" prefWidth="93.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="137.0" text="Número da Mesa:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNumeroMesa" layoutX="148.0" layoutY="135.0" prefHeight="25.0" prefWidth="110.0" promptText="Número da Mesa" />
+            <Button layoutX="271.0" layoutY="130.0" mnemonicParsing="false" onAction="#acaoPesquisar" prefHeight="36.0" prefWidth="110.0" text="Pesquisar" />
+            <Button fx:id="botaoMostrarTodos" layoutX="506.0" layoutY="174.0" mnemonicParsing="false" onAction="#acaoMostrarTodos" prefHeight="48.0" prefWidth="200.0" text="Mostrar todos os Pedidos" />
+            <Button fx:id="botaoMostrarFechados" layoutX="506.0" layoutY="235.0" mnemonicParsing="false" onAction="#acaoMostrarAbertos" prefHeight="48.0" prefWidth="200.0" text="Mostrar apenas pedidos abertos" />
+            <Button fx:id="botaoInformacaoPedido" layoutX="506.0" layoutY="334.0" mnemonicParsing="false" onAction="#acaoInformacaoPedido" prefHeight="48.0" prefWidth="200.0" text="Ver informações do Pedido" />
+            <Button fx:id="botaoFecharComanda" layoutX="506.0" layoutY="391.0" mnemonicParsing="false" onAction="#acaoFecharComanda" prefHeight="48.0" prefWidth="200.0" text="Fechar Comanda" />
+            </children></AnchorPane>
+    </items>
+</SplitPane>

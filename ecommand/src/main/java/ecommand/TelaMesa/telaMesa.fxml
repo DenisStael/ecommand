@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="720.0" style="-fx-background-color: #5353c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaMesa.TelaMesaController">
+   <children>
+      <ImageView fitHeight="126.0" fitWidth="296.0" layoutX="213.0" layoutY="29.0">
+         <image>
+            <Image url="@../img/logo.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtNumeroMesa" layoutX="286.0" layoutY="230.0" prefHeight="48.0" prefWidth="162.0" promptText="Numero da mesa" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="botaoVisualizarCardapio" layoutX="308.0" layoutY="411.0" mnemonicParsing="false" onAction="#acaoVisualizarCardapio" prefHeight="48.0" prefWidth="118.0" style="-fx-background-color: #47d147; -fx-background-radius: 100;" text="Ir para Cardápio" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="botaoVoltar" layoutX="329.0" layoutY="505.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="48.0" prefWidth="76.0" style="-fx-background-color: WHITE; -fx-background-radius: 100;" text="Voltar" />
+      <Label layoutX="185.0" layoutY="172.0" text="Informe o numero da mesa para continuar:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelMesa" alignment="CENTER" contentDisplay="CENTER" layoutX="280.0" layoutY="287.0" prefHeight="27.0" prefWidth="175.0" textFill="#a40505">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

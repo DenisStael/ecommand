@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaPedido.TelaPedidoController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="486.0" prefWidth="718.0">
+         <children>
+            <AnchorPane layoutX="-2.0" minHeight="0.0" minWidth="0.0" prefHeight="113.0" prefWidth="722.0" style="-fx-background-color: #5353c6;">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="225.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="324.0" layoutY="38.0" text="Meu Pedido" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button fx:id="botaoVoltar" layoutX="14.0" layoutY="543.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="36.0" prefWidth="91.0" text="Voltar" />
+            <TextArea fx:id="txtObservacao" layoutX="181.0" layoutY="496.0" prefHeight="84.0" prefWidth="330.0" promptText="Adicionais ao pedido, restrições..." />
+            <Label layoutX="181.0" layoutY="466.0" text="Observações:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="btConfirmarPedido" layoutX="569.0" layoutY="543.0" mnemonicParsing="false" onAction="#acaoConfirmar" prefHeight="36.0" prefWidth="128.0" style="-fx-background-color: #47d147;" text="Confirmar Pedido" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <ListView fx:id="listaPratos" layoutX="86.0" layoutY="150.0" prefHeight="303.0" prefWidth="547.0" stylesheets="@../css/TableStyle.css" />
+            <Label layoutX="86.0" layoutY="125.0" text="Número da Mesa: ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNumeroMesa" layoutX="224.0" layoutY="125.0" prefHeight="25.0" prefWidth="52.0" text="0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="453.0" layoutY="453.0" text="Valor Total:  R$" textFill="#1706ff">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPrecoTotal" layoutX="575.0" layoutY="453.0" prefHeight="25.0" prefWidth="58.0" text="0.00" textFill="LIME">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

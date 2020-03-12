@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.20903010033444816" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaEditarPrato.TelaEditarPratoController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5353c6;">
+         <children>
+            <ImageView fitHeight="175.0" fitWidth="257.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="367.0" layoutY="36.0" prefHeight="53.0" prefWidth="199.0" text="Editar Pratos" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TextField fx:id="txtNome" layoutX="105.0" layoutY="19.0" promptText="Nome" />
+            <TextField fx:id="txtPreco" layoutX="343.0" layoutY="19.0" prefHeight="25.0" prefWidth="97.0" promptText="0.00" />
+            <TextArea fx:id="txtDescricao" layoutX="105.0" layoutY="56.0" prefHeight="82.0" prefWidth="335.0" wrapText="true" />
+            <TableView fx:id="tabelaPratos" layoutX="12.0" layoutY="220.0" onMouseClicked="#clicarTabela" prefHeight="208.0" prefWidth="697.0">
+              <columns>
+                <TableColumn fx:id="colunaPratos" prefWidth="132.0" text="Pratos" />
+                <TableColumn fx:id="colunaCodigo" prefWidth="63.0" text="Código" />
+                  <TableColumn fx:id="colunaDescricao" prefWidth="420.0" text="Descrição" />
+                  <TableColumn fx:id="colunaPreco" minWidth="4.0" prefWidth="81.0" text="Preço" />
+              </columns>
+            </TableView>
+            <Label layoutX="31.0" layoutY="21.0" text="Nome:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="59.0" text="Descrição:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="271.0" layoutY="21.0" text="Preço:  R$">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="326.0" layoutY="434.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="21.0" prefWidth="66.0" text="Voltar">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="105.0" layoutY="144.0" mnemonicParsing="false" onAction="#acaoAtualizar" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #47d147;" text="Atualizar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button layoutX="361.0" layoutY="144.0" mnemonicParsing="false" onAction="#acaoLimpar" prefHeight="27.0" prefWidth="81.0" text="Limpar">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button layoutX="231.0" layoutY="144.0" mnemonicParsing="false" onAction="#acaoRemover" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #ff3333;" text="Remover" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <TextField fx:id="txtPesquisa" layoutX="185.0" layoutY="185.0" prefHeight="25.0" prefWidth="132.0" promptText="Nome" />
+            <Label layoutX="13.0" layoutY="184.0" text="Pesquisar por nome:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="332.0" layoutY="185.0" mnemonicParsing="false" onAction="#acaoPesquisar" prefHeight="25.0" prefWidth="81.0" text="Pesquisar" />
+            <ImageView fx:id="imgProduto" fitHeight="127.0" fitWidth="165.0" layoutX="483.0" layoutY="88.0" onMouseClicked="#acaoSelecionaImagem" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/sem_imagem.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="477.0" layoutY="56.0" prefHeight="25.0" prefWidth="177.0" text="Clique na imagem para escolher:" />
+            <TextField fx:id="txtCodigo" layoutX="531.0" layoutY="16.0" prefHeight="25.0" prefWidth="81.0" promptText="Código" />
+            <Label layoutX="477.0" layoutY="18.0" text="Código:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="308.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaAtendimento.TelaInformacaoController">
+    <children>
+        <TableView fx:id="tabelaPratos" onMouseClicked="#acaoPegaCodigoTabela" prefHeight="270.0" prefWidth="723.0">
+            <columns>
+                <TableColumn fx:id="colunaPrato" prefWidth="126.0" text="Nome" />
+                <TableColumn fx:id="colunaCodPrato" prefWidth="60.0" text="Código" />
+                <TableColumn fx:id="colunaDescPrato" prefWidth="459.0" text="Descrição" />
+                <TableColumn fx:id="colunaStatus" prefWidth="77.0" text="Status" />
+            </columns>
+        </TableView>
+        <Button fx:id="botaoSituacao" layoutX="14.0" layoutY="276.0" mnemonicParsing="false" onAction="#acaoFinalizar" prefHeight="25.0" prefWidth="134.0" style="-fx-background-color: #00b33c;" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+      <Label fx:id="labelStatus" layoutX="250.0" layoutY="279.0" prefHeight="19.0" prefWidth="223.0" textFill="#d32828">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

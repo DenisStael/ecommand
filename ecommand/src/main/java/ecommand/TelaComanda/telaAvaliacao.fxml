@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="720.0" style="-fx-background-color: #5353c6;" stylesheets="@../css/telaAvaliacao.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaComanda.TelaAvaliacao">
+   <children>
+      <Button layoutX="287.0" layoutY="553.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="33.0" prefWidth="146.0" text="Voltar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Pane fx:id="pane" layoutX="17.0" layoutY="23.0" prefHeight="520.0" prefWidth="689.0" styleClass="avaliacaoPane">
+         <children>
+            <Button layoutX="142.0" layoutY="463.0" mnemonicParsing="false" onAction="#acaoSemAvaliar" prefHeight="33.0" prefWidth="146.0" style="-fx-background-color: #ae1313;" text="Continuar sem Avaliar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="388.0" layoutY="463.0" mnemonicParsing="false" onAction="#acaoEnviarAvaliacao" prefHeight="33.0" prefWidth="146.0" style="-fx-background-color: #00b33c;" text="Enviar Avaliação" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="95.0" layoutY="121.0" text="Atendimento:" textFill="#4242c6">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="126.0" layoutY="183.0" text="Aplicativo:" textFill="#4242c6">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="151.0" layoutY="246.0" text="Comida:" textFill="#4242c6">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="58.0" text="Por favor deixe-nos sua opinião a fim de melhorarmos nosso serviço:" textFill="#02029a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtComentario" layoutX="129.0" layoutY="331.0" prefHeight="119.0" prefWidth="418.0" promptText="Escreva seu comentário aqui..." wrapText="true" />
+            <Label layoutX="138.0" layoutY="299.0" prefHeight="32.0" prefWidth="392.0" text="Deixe-nos seu comentário (opcional): " textFill="#4242c6">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

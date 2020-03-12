@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="720.0" style="-fx-background-color: #5353c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ecommand.TelaCadastro.TelaCadastroController">
+   <children>
+      <ImageView fitHeight="126.0" fitWidth="296.0" layoutX="214.0" layoutY="29.0">
+         <image>
+            <Image url="@../img/logo.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtNome" layoutX="280.0" layoutY="255.0" prefHeight="30.0" prefWidth="164.0" promptText="Nome" />
+      <Label layoutX="176.0" layoutY="213.0" text="Para continuar insira as informações abaixo:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtSenha" layoutX="281.0" layoutY="306.0" prefHeight="30.0" prefWidth="164.0" promptText="Senha" />
+      <PasswordField fx:id="txtConfirmaSenha" layoutX="282.0" layoutY="354.0" prefHeight="30.0" prefWidth="164.0" promptText="Confirme a senha" />
+      <Button fx:id="botaoEnviarCadastro" layoutX="297.0" layoutY="414.0" mnemonicParsing="false" onAction="#acaoEnvioCadastro" prefHeight="38.0" prefWidth="127.0" style="-fx-background-color: #00b33c;" text="Cadastrar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="botaoVoltar" layoutX="328.0" layoutY="493.0" mnemonicParsing="false" onAction="#acaoVoltar" prefHeight="38.0" prefWidth="64.0" style="-fx-background-color: WHITE;" text="Voltar">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Label fx:id="labelTipo" layoutX="281.0" layoutY="176.0" prefHeight="27.0" prefWidth="185.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
